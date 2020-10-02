@@ -1,6 +1,8 @@
 spring:
-  jpa:hibernate:ddl-auto: update
+  jpa:
+    generate-ddl: true
+    hibernate:ddl-auto: update
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/blog
-    username: admin
-    password: ins630
+    username: root
+    password:

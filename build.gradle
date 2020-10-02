@@ -34,14 +34,15 @@ test {
 }
 
 task npmRunBuild() {
-	if (!file("${rootDir}/blog-front/node_modules").exists()) {
-		"npm --prefix ${rootDir}/blog-front install ${rootDir}/blog-front"
-				.execute()
-				.waitForProcessOutput(System.out, System.err)
-	}
-	"npm --prefix ${rootDir}/blog-front run build"
-			.execute()
-			.waitForProcessOutput(System.out, System.err)
+//	一時的にフロントのビルドをやめる。ビルド時間がながくなるため
+//	if (!file("${rootDir}/front/node_modules").exists()) {
+//		"npm --prefix ${rootDir}/front install ${rootDir}/front"
+//				.execute()
+//				.waitForProcessOutput(System.out, System.err)
+//	}
+//	"npm --prefix ${rootDir}/front run build"
+//			.execute()
+//			.waitForProcessOutput(System.out, System.err)
 }
 
 processResources {
