@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <p>ブログ内検索</p>
+        <v-text-field
+        label="Search..."
+        prepend-inner-icon="mdi-magnify"
+        ></v-text-field>
+    </div>
+</template>
